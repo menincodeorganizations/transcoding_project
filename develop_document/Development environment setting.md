@@ -3,11 +3,29 @@
 * centOS 6.8, AWS server, FFmpeg
 ----
 
-## Server spec
-* FFmpeg
-* apache
-* PHP
-* MariaDB
+## Server setting
+
+```
+yum update
+
+yum groupinstall 'Development Tools'
+
+yum install git-core
+
+yum install mercurial
+
+yum install cmake
+
+yum install freetype-devel
+
+yum provides */lsb_release
+
+yum install redhat-lsb
+
+
+
+
+```
 
 ---
 ## FFmpeg 설치
