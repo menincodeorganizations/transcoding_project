@@ -24,7 +24,7 @@ char *opcode = "./trans";
 perror( "inotify_init" );
 }
 
-  wd = inotify_add_watch( fd, "/home/son/ff_trans/inotify", 
+  wd = inotify_add_watch( fd, "/var/www/html/vod_upload", 
 IN_MODIFY | IN_CREATE | IN_DELETE );
 length = read( fd, buffer, BUF_LEN ); 
 
@@ -43,7 +43,9 @@ else {
 
 printf( "The file %s was created.\n", event->name );
 sprintf(Full_Opcode_1,"%s %s",opcode,event->name);
-system(Full_Opcode_1);
+//system(Full_Opcode_1);
+
+printf("transcoding~~~~~~~~~~~~~~~~~~~\n");
 }
 }
 else if ( event->mask & IN_DELETE ) {
