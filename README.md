@@ -5,7 +5,7 @@
 
 ## Server spec
 * FFmpeg
-* NGINX
+* Apache
 * PHP
 * MariaDB
 
